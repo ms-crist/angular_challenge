@@ -1,0 +1,41 @@
+
+.card:hover {
+  box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2);
+  background: RGB(120, 194, 174);
+  color: white;
+  transform: scale(0.9);
+}
+
+.card {
+  width: 600px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 575px){
+  .mt-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+}
+
+@media (max-width: 699px){
+  .mb-3{
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+

@@ -1,0 +1,27 @@
+
+<div class="row mt-3" style="margin-left: 30%;">
+<div class="card text-center" *ngIf='miReceta;'>
+  <div class="card-header">
+    <h1>Detalle de receta</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center; font-weight:bold;"> {{miReceta.title}}</h5>
+      <img src="{{miReceta.image}}" style="width: 60%;" alt="">
+     <div class="info container" style="padding: 20px; font-weight: bolder;font-family: cursive;">
+      <div class="card-body">
+        <div class="card-text"> <h4>Tiempo de preparación: {{miReceta.readyInMinutes}} minutos</h4></div>
+        <div class="card-text"><h4>Precio : ${{miReceta.pricePerServing}}</h4></div>
+        <div class="card-text"><h4>Health Score : {{miReceta.healthScore}}</h4></div>
+        <div style="margin-top: 10%;"> 
+        <button type="button" class="btn btn-danger" (click)="irInicio()">Volver</button>
+        <button class="btn btn-danger" id="btn_plato" style="margin-left: 23%;" (click)="guardarPlato();">Agregar al menú</button>
+      </div>
+     <!--  <div class="row justify-content-center">
+        <div class="col-12"><button class="btn btn-outline-info" (click)='saverecipe()'>Save To my List</button></div>
+      </div> -->
+     </div>
+    </div>
+  </div>
+</div>
+</div>
+

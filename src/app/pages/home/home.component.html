@@ -1,0 +1,74 @@
+<div class="wrapper">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <img src=".\assets\resto.png" alt="" style="width: 5%; margin-right: 2%;">
+      <a class="navbar-brand" href="#">Restaurant a la Carta</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto" style="margin-left: 46%;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+          <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-basket"> 
+          </i>Menú <span class="badge bg-secondary">{{obtenerMenu().length}}</span></a>
+           <div class="dropdown-menu dropdown-menu-right" style="margin-right: 30%;">  
+            <div class="card-text" *ngFor="let menu of obtenerMenu(); let i of index">
+              <div style="display: flex; justify-content:space-around;">
+                  <img src="{{menu.imagen}}" alt="" width="10%" style="margin-left: 2%;"> 
+                
+                
+              <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">{{menu.titulo | slice:0:15}}...</h6>
+            
+            
+              <h6 class="card-title" id="precioTotal" style="text-align: center; font-weight:bold; margin-top: 1%;">${{menu.precio}}</h6>
+
+            
+          
+           
+            <button type="button" class="btn btn-primary btn-sm" (click)="eliminarPlato(indice)">Quitar</button>
+         
+            </div>
+            <li><hr class="dropdown-divider"></li>
+            </div>
+            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">Total menú ${{midinero}}</h6>
+            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">Promedio healthScore ${{midineroprom}}</h6>
+            <button type="button" class="btn btn-danger" (click)="vaciarMenu()" style="margin-left: 10%;">Vaciar menú</button>
+          </div>
+          
+            <button type="button" class="btn btn-danger" (click)="cerrarSesion()">Cerrar sesión</button>
+         
+          </div>
+        </div>
+        </nav> 
+        <div class="container-fluid mt-5">
+          <h1 style="text-align: center;">Menú actual</h1>
+          <div class="row">
+                <div class="col-lg-3 mt-3 mb-3"  *ngFor="let menu of obtenerMenu(); let i of index">
+                  <div class="card border-success mb-3" style="max-width: 15rem; margin-top: 1%; margin-left: 1%;">
+                    <div class="card-text"> 
+                    <div class="card-header">{{menu.titulo | slice:0:15 }}</div>
+                    <div class="card-body">
+                      <h4 class="card-title"></h4>
+                      <img src="{{menu.imagen}}" alt="" width="80%" style="margin-left: 10%;"> 
+                      <h4 class="card-text" style="margin-left: 25%; margin-top: 1%;">${{menu.precio}}</h4>
+                      
+                    </div>
+                  </div>
+                </div>    
+                </div>
+            </div>
+  </div>
+  </div>
+         
+          
+    
+      
+    
+   
+  
+  <router-outlet></router-outlet>
