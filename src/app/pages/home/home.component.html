@@ -26,8 +26,6 @@
             
             
               <h6 class="card-title" id="precioTotal" style="text-align: center; font-weight:bold; margin-top: 1%;">${{menu.precio}}</h6>
-
-            
           
            
             <button type="button" class="btn btn-primary btn-sm" (click)="eliminarPlato(indice)">Quitar</button>
@@ -35,8 +33,7 @@
             </div>
             <li><hr class="dropdown-divider"></li>
             </div>
-            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">Total menú ${{midinero}}</h6>
-            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">Promedio healthScore ${{midineroprom}}</h6>
+            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">Total menú {{midinero | currency}}</h6>
             <button type="button" class="btn btn-danger" (click)="vaciarMenu()" style="margin-left: 10%;">Vaciar menú</button>
           </div>
           
@@ -45,24 +42,7 @@
           </div>
         </div>
         </nav> 
-        <div class="container-fluid mt-5">
-          <h1 style="text-align: center;">Menú actual</h1>
-          <div class="row">
-                <div class="col-lg-3 mt-3 mb-3"  *ngFor="let menu of obtenerMenu(); let i of index">
-                  <div class="card border-success mb-3" style="max-width: 15rem; margin-top: 1%; margin-left: 1%;">
-                    <div class="card-text"> 
-                    <div class="card-header">{{menu.titulo | slice:0:15 }}</div>
-                    <div class="card-body">
-                      <h4 class="card-title"></h4>
-                      <img src="{{menu.imagen}}" alt="" width="80%" style="margin-left: 10%;"> 
-                      <h4 class="card-text" style="margin-left: 25%; margin-top: 1%;">${{menu.precio}}</h4>
-                      
-                    </div>
-                  </div>
-                </div>    
-                </div>
-            </div>
-  </div>
+       
   </div>
          
           
@@ -72,3 +52,21 @@
    
   
   <router-outlet></router-outlet>
+  <div class="container-fluid mt-5">
+    <h1 style="text-align: center;">Menú actual</h1>
+    <div class="row">
+          <div class="col-lg-3 mt-3 mb-3"  *ngFor="let menu of obtenerMenu(); let i of index">
+            <div class="card border-success mb-3" style="max-width: 15rem; margin-top: 1%; margin-left: 1%;">
+              <div class="card-text"> 
+              <div class="card-header">{{menu.titulo | slice:0:15 }}</div>
+              <div class="card-body">
+                <h4 class="card-title"></h4>
+                <img src="{{menu.imagen}}" alt="" width="80%" style="margin-left: 10%;"> 
+                <h4 class="card-text" style="margin-left: 25%; margin-top: 1%;">${{menu.precio}}</h4>
+                
+              </div>
+            </div>
+          </div>    
+          </div>
+      </div>
+</div>

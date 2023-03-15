@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecetasService } from 'src/app/services/recetas.service';
 import { Injectable } from '@angular/core';
-import { MenuActual } from '../menu.actual';
+import { MenuActual } from '../menu.actual.model';
 import Swal from 'sweetalert2';
 import { MenuService } from 'src/app/services/menu.service';
 import { SumaPrecioService } from 'src/app/services/sumaPrecio.service';
@@ -123,9 +123,13 @@ export class DetalleComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         })
+        .then((result) => {
+          window.location.reload();
+      });
         //this.suma++;
        //this.totales();
         this.midinero = this.sumaPrecioService.newPrecio;
+       
       } 
     } 
   }

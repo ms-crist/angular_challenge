@@ -5,11 +5,13 @@ import { NotificationService } from 'src/app/services/notification.service';
 import Swal from 'sweetalert2';
 import { DetalleComponent } from './detalle/detalle.component';
 import { MenuService } from 'src/app/services/menu.service';
-import { MenuActual } from './menu.actual';
+import { MenuActual } from './menu.actual.model';
 import { SumaPrecioService } from 'src/app/services/sumaPrecio.service';
 import { PromedioService } from 'src/app/services/promedio.service';
 import { RecetasService } from 'src/app/services/recetas.service';
-import { refsToArray } from '@angular/compiler/src/render3/util';
+
+
+
 
 
 
@@ -45,7 +47,7 @@ export class HomeComponent implements OnInit {
   storage: any;
   midineroprom: any;
   precio: any;
-  
+  Suma: any;
 
  
   
@@ -54,9 +56,10 @@ export class HomeComponent implements OnInit {
     this.midinero = this.sumaPrecioService.suma;
   
     this.midineroprom = this.detalleComponent.midineroprom
-    
+
   
   }
+
 
   
   miReceta:any = null
@@ -90,7 +93,8 @@ totales(){
   
 
   obtenerMenu(): MenuActual[] {
-    return JSON.parse(localStorage.getItem("menu_resto") || "[]")
+    return JSON.parse(localStorage.getItem("menu_resto") || "[]");
+    
   }
 
 
@@ -133,7 +137,6 @@ totales(){
         Swal.fire('El menú no se eliminó', '', 'info')
       }
     })
-    
   }
 
  
@@ -157,12 +160,14 @@ totales(){
           'El plato ha sido eliminado del menú',
           'success'
         )
-        
+        .then((result) => {
+          window.location.reload();
+      }); 
         this.newObj.splice(indice, 1);
         this.menuService.guardarMenu(this.newObj); 
         this.midinero = this.newObj;
+        
       }
-     
     })
   }
   
