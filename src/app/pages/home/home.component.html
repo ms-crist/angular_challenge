@@ -17,7 +17,7 @@
           <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-basket"> 
           </i>Menú <span class="badge bg-secondary">{{obtenerMenu().length}}</span></a>
            <div class="dropdown-menu dropdown-menu-right" style="margin-right: 30%;">  
-            <div class="card-text" *ngFor="let menu of obtenerMenu(); let i of index">
+            <div class="card-text" *ngFor="let menu of obtenerMenu(); let i of indice">
               <div style="display: flex; justify-content:space-around;">
                   <img src="{{menu.imagen}}" alt="" width="10%" style="margin-left: 2%;"> 
                 

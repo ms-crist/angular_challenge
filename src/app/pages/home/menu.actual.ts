@@ -8,7 +8,7 @@ export class MenuActual {
   public precio: Number;
   public healthscore: Number;
   index: any;
-  i: any;
+  i!: number;
 
 
 

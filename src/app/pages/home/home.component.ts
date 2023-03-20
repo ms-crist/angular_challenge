@@ -141,7 +141,7 @@ totales(){
 
  
 
-  eliminarPlato(indice: number) {
+  eliminarPlato(i: number) {
   
   
     Swal.fire({
@@ -163,12 +163,16 @@ totales(){
         .then((result) => {
           window.location.reload();
       }); 
-        this.newObj.splice(indice, 1);
+        this.newObj.splice(i, 1);
+        //this.patchValues();
         this.menuService.guardarMenu(this.newObj); 
         this.midinero = this.newObj;
         
       }
     })
+  }
+  patchValues() {
+    throw new Error('Method not implemented.');
   }
   
 
