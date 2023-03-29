@@ -13,6 +13,8 @@ import { DetalleComponent } from '../detalle/detalle.component';
 
 
 
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -74,7 +76,7 @@ export class DashboardComponent implements OnInit {
             this.muestraRecetas = result.results;
             }) 
           },(err: any)=>{
-          //this.isSearching = false;
+          alert(err);
           console.log('error',err);
           });
     
