@@ -147,13 +147,14 @@ totales(){
   
   
     Swal.fire({
-      title: '¿Estás seguro de borrar?',
+      title: '¿Estás seguro de borrar un plato del menú?',
       text: "¡No podrás revertir los cambios!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Sí, Borrar!'
+      confirmButtonText: 'Sí, Borrar!',
+      cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
            
