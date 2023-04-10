@@ -126,10 +126,11 @@ export class DetalleComponent implements OnInit {
         .then((result) => {
           //window.location.reload();
           this.router.navigate(['/home']);
+          this.midinero = this.sumaPrecioService.newPrecio;
       });
         //this.suma++;
        //this.totales();
-        this.midinero = this.sumaPrecioService.newPrecio;
+        //this.midinero = this.sumaPrecioService.newPrecio;
        
       } 
     } 
