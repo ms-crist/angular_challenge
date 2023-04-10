@@ -125,6 +125,7 @@ export class DetalleComponent implements OnInit {
         })
         .then((result) => {
           //window.location.reload();
+          this.router.navigate(['/home']);
       });
         //this.suma++;
        //this.totales();
