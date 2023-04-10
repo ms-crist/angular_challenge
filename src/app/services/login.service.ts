@@ -17,7 +17,7 @@ export class LoginService {
 
   loginUser(data: LoginDto): Observable<any> {
    /*  let urlService = environment.urlBase + "/login"; */
-    return this._http.post("http://challenge-react.alkemy.org/", data);
+    return this._http.post("http://challenge-react.alkemy.org", data);
 
     
     
