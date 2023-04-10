@@ -171,7 +171,7 @@ totales(){
           this._route.navigate(['/home']);
           this.midinero = this.sumaPrecioService.newPrecio;
       }); 
-      
+       
         
       }
     })

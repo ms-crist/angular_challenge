@@ -127,6 +127,8 @@ export class DetalleComponent implements OnInit {
           //window.location.reload();
           this.router.navigate(['/home']);
           this.midinero = this.sumaPrecioService.newPrecio;
+          //this.router.navigate(['/home']);
+          //this.midinero = this.sumaPrecioService.newPrecio;
       });
         //this.suma++;
        //this.totales();
