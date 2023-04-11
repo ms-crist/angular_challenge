@@ -167,7 +167,7 @@ totales(){
           this.newObj.splice(i, 1);
           this.menuService.guardarMenu(this.newObj); 
           //this.midinero = this.newObj;
-          window.location.reload();
+          //window.location.reload();
           this._route.navigate(['']);
           //this.midinero = this.sumaPrecioService.newPrecio;
       }); 
