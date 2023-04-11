@@ -169,7 +169,7 @@ totales(){
           //this.midinero = this.newObj;
           //window.location.reload();
           this._route.navigate(['']);
-          //this.midinero = this.sumaPrecioService.newPrecio;
+          this.midinero = this.sumaPrecioService.newPrecio;
       }); 
        
         
