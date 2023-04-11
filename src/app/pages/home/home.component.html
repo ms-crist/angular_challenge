@@ -33,7 +33,7 @@
             </div>
             <li><hr class="dropdown-divider"></li>
             </div>
-            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;" (ngModelChange)="midinero">Total menú {{midinero | currency}}</h6>
+            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;" (ngModelChange)="this.midinero">Total menú {{midinero | currency}}</h6>
             <button type="button" class="btn btn-danger" (click)="vaciarMenu()" style="margin-left: 10%;">Vaciar menú</button>
           </div>
           
