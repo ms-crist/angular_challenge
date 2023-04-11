@@ -124,9 +124,9 @@ export class DetalleComponent implements OnInit {
           timer: 1500
         })
         .then((result) => {
-          //window.location.reload();
+          window.location.reload();
           this.router.navigate(['/home']);
-          this.midinero = this.sumaPrecioService.newPrecio;
+          //this.midinero = this.sumaPrecioService.newPrecio;
           //this.router.navigate(['/home']);
           //this.midinero = this.sumaPrecioService.newPrecio;
       });
