@@ -17,7 +17,7 @@
           <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-basket"> 
           </i>Menú <span class="badge bg-secondary">{{obtenerMenu().length}}</span></a>
            <div class="dropdown-menu dropdown-menu-right" style="margin-right: 30%;">  
-            <div class="card-text" *ngFor="let menu of obtenerMenu(); let indice = index" (ngModelChange)="menu">
+            <div class="card-text" *ngFor="let menu of obtenerMenu(); let indice = index">
               <div style="display: flex; justify-content:space-around;">
                   <img src="{{menu.imagen}}" alt="" width="10%" style="margin-left: 2%;"> 
                 
@@ -33,7 +33,7 @@
             </div>
             <li><hr class="dropdown-divider"></li>
             </div>
-            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;">Total menú {{midinero | currency}}</h6>
+            <h6 class="card-title" style="text-align: center; font-weight:bold; margin-top: 1%;" *ngIf="midinero">Total menú {{midinero | currency}}</h6>
             <button type="button" class="btn btn-danger" (click)="vaciarMenu()" style="margin-left: 10%;">Vaciar menú</button>
           </div>
           
