@@ -125,7 +125,7 @@ export class DetalleComponent implements OnInit {
         })
         .then((result) => {
           window.location.reload();
-          this.router.navigate(['/home']);
+          this.router.navigate(['/']);
           //this.midinero = this.sumaPrecioService.newPrecio;
           //this.router.navigate(['/home']);
           //this.midinero = this.sumaPrecioService.newPrecio;
