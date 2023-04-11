@@ -168,10 +168,11 @@ totales(){
           this.menuService.guardarMenu(this.newObj); 
           //this.midinero = this.newObj;
           //window.location.reload();
+          this.midinero = this.sumaPrecioService.newPrecio;
           this._route.navigate(['']);
           
       }); 
-       this.midinero = this.sumaPrecioService.newPrecio;
+      
         
       }
     })
